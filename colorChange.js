@@ -23,6 +23,6 @@ function hexToRGBA(hex, alpha = 0.25) {
 bgColorPicker.addEventListener("input", (event) => {
     const selectedColor2 = event.target.value;
     const rgbaColor = hexToRGBA(selectedColor2, 0.25)
-    bg1.style.color = rgbaColor;
-    bg2.style.color = rgbaColor;
+    bg1.style.backgroundColor = rgbaColor;
+    bg2.style.backgroundColor = rgbaColor;
 });
