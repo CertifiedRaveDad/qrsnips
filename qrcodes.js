@@ -1431,5 +1431,6 @@ const svgs = {
 document.querySelectorAll('input[name="QRCodeStyle"]').forEach(radio => {
     radio.addEventListener('change', (event) => {
         svgContainer.innerHTML = svgs[event.target.value]; // Change SVG
+        console.log("run");
     });
 });
