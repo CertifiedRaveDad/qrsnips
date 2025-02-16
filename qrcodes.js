@@ -358,8 +358,7 @@ const svgs = {
 <path d="M775.93 868H744V899.93H775.93V868Z" fill="currentColor"/>
 <path d="M806.93 868H775V899.93H806.93V868Z" fill="currentColor"/>
 <path d="M837.93 868H806V899.93H837.93V868Z" fill="currentColor"/>
-</svg>
-`,
+</svg>`,
     Trance: `<svg width="100%" height="100%" viewBox="0 0 1023 1023" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M341.93 93.93H310C310 76.3685 324.369 62 341.93 62L339.801 68.9182C337.673 74.772 337.673 81.6902 339.801 87.544L341.93 93.93Z" fill="currentColor"/>
 <path d="M403.93 93.93H372C372 76.3685 386.369 62 403.93 62L401.801 68.9182C399.673 74.772 399.673 81.6902 401.801 87.544L403.93 93.93Z" fill="currentColor"/>
