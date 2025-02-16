@@ -3,7 +3,7 @@ const svgContainer = document.getElementById("svg-container");
 
 // SVGs stored as strings
 const svgs = {
-    Basic: `<svg fill="none" xmlns="http://www.w3.org/2000/svg">
+    Basic: `<svg viewBox="0 0 990 990"  fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M242.66 44H220V66.66H242.66V44Z" fill="currentColor"/>
     <path d="M352.66 44H330V66.66H352.66V44Z" fill="currentColor"/>
     <path d="M374.66 44H352V66.66H374.66V44Z" fill="currentColor"/>
@@ -755,7 +755,7 @@ const svgs = {
     <path d="M902 88H836V154H902V88Z" fill="currentColor"/>
     <path d="M154 836H88V902H154V836Z" fill="currentColor"/>
     </svg>`,
-    Trance: `<svg fill="none" xmlns="http://www.w3.org/2000/svg">
+    Trance: `<svg viewBox="0 0 990 990" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M242.66 66.66H220C220 54.197 230.197 44 242.66 44L241.149 48.9097C239.639 53.064 239.639 57.9737 241.149 62.128L242.66 66.66Z" fill="currentColor"/>
     <path d="M352.66 66.66H330V55.33C330 48.9097 334.91 44 341.33 44H352.66V66.66Z" fill="currentColor"/>
     <path d="M374.66 44H352V66.66H374.66V44Z" fill="currentColor"/>
