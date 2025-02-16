@@ -3,7 +3,7 @@ const svgContainer = document.getElementById("svg-container");
 
 // SVGs stored as strings
 const svgs = {
-    Basic: `<svg width="1000%" height"100%" viewBox="0 0 990 990"  fill="none" xmlns="http://www.w3.org/2000/svg">
+    Basic: `<svg width="1000%" height"100%" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M242.66 44H220V66.66H242.66V44Z" fill="currentColor"/>
     <path d="M352.66 44H330V66.66H352.66V44Z" fill="currentColor"/>
     <path d="M374.66 44H352V66.66H374.66V44Z" fill="currentColor"/>
