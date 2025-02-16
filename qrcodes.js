@@ -1428,7 +1428,7 @@ const svgs = {
 };
 
 // Listen for radio button changes
-document.querySelectorAll('input[name="svgOption"]').forEach(radio => {
+document.querySelectorAll('input[name="QRCodeStyle"]').forEach(radio => {
     radio.addEventListener('change', (event) => {
         svgContainer.innerHTML = svgs[event.target.value]; // Change SVG
     });
