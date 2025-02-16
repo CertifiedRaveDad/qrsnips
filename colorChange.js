@@ -20,7 +20,7 @@ function hexToRGBA(hex, alpha = 0.25) {
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
 
-bgColorPicker.addEventListener("input", (event) => {
+bgColorPicker.addEventListener("bgColorPicker", (event) => {
     const selectedColor2 = event.target.value;
     const rgbaColor = hexToRGBA(selectedColor2, 0.25)
     bg1.style.backgroundColor = rgbaColor;
