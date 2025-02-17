@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const selectedTheme = event.target.value;
                 console.log("Theme changed to:", selectedTheme); // Debugging: Check selected value
 
-                const fontColor = selectedTheme === "dark" ? "black" : "white";
+                const fontColor = selectedTheme === "Dark Font" ? "black" : "white";
 
                 textElements.forEach(element => {
                     element.style.color = fontColor;
