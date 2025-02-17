@@ -1,4 +1,4 @@
-const colorPicker = document.getElementById("QRCodecolorInput");
+const colorPicker = document.getElementById("qrcolorp");
 const div1 = document.getElementById("svg-container");
 const div2 = document.getElementById("QRcodeText");
 
