@@ -26,3 +26,50 @@ bgColorPicker.addEventListener("input", (event) => {
     bg1.style.backgroundColor = rgbaColor;
     bg2.style.backgroundColor = rgbaColor;
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const fileInput = document.getElementById('wallpaper-upload');
+    const previewArea = document.getElementById('wallpaper-demo');
+    const wallpaperRadios = document.querySelectorAll('input[name="WallpaperOptions"]');
+
+    // Object mapping values to actual image URLs
+    const wallpaperImages = {
+        wallpaper1: "https://th.bing.com/th/id/OIP.GELKQ4d2ogvLPHMtaI4UygHaHa?rs=1&pid=ImgDetMain",
+        wallpaper2: "https://th.bing.com/th/id/OIP.RVXdocs4cbENDzq9XpLkiwHaFS?rs=1&pid=ImgDetMain",
+        wallpaper3: "https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg"
+    };
+
+
+    function setWallpaper(imageUrl) {
+        previewArea.style.backgroundImage = `url(${imageUrl})`;
+    }
+
+    // Handle radio button selection
+    wallpaperRadios.forEach(radio => {
+        radio.addEventListener('change', (event) => {
+            const selectedWallpaper = event.target.value;
+            if (wallpaperImages[selectedWallpaper]) {
+                setWallpaper(wallpaperImages[selectedWallpaper]);
+            }
+            fileInput.value = ""; // Clear file input to prevent conflicts
+        });
+    });
+
+
+    // Handle file upload
+    fileInput.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = (e) => {
+                setWallpaper(e.target.result);
+                // Uncheck all radio buttons when a file is uploaded
+                wallpaperRadios.forEach(radio => radio.checked = false);
+            }
+
+            reader.readAsDataURL(file);
+        }
+    });
+});
