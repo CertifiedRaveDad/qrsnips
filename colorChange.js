@@ -1,33 +1,34 @@
-const colorPicker = document.getElementById("qrcolorp");
-const div1 = document.getElementById("svg-container");
-const div2 = document.getElementById("QRcodeText");
-
-colorPicker.addEventListener("input", (event) => {
-    const selectedColor = event.target.value;
-    div1.style.color = selectedColor;
-    div2.style.color = selectedColor;
-});
-
-
-const bgColorPicker = document.getElementById("QRBackgroundColor");
-const bg1 = document.getElementById("qrbgcontainer");
-const bg2 = document.getElementById("QRTextbgcontainer");
-
-function hexToRGBA(hex, alpha = 0.25) {
-    let r = parseInt(hex.substring(1, 3), 16);
-    let g = parseInt(hex.substring(3, 5), 16);
-    let b = parseInt(hex.substring(5, 7), 16);
-    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
-}
-
-bgColorPicker.addEventListener("input", (event) => {
-    const selectedColor2 = event.target.value;
-    const rgbaColor = hexToRGBA(selectedColor2, 0.25)
-    bg1.style.backgroundColor = rgbaColor;
-    bg2.style.backgroundColor = rgbaColor;
-});
-
 document.addEventListener("DOMContentLoaded", () => {
+    const colorPicker = document.getElementById("qrcolorp");
+    const div1 = document.getElementById("svg-container");
+    const div2 = document.getElementById("QRcodeText");
+
+    colorPicker.addEventListener("input", (event) => {
+        const selectedColor = event.target.value;
+        div1.style.color = selectedColor;
+        div2.style.color = selectedColor;
+    });
+
+
+    const bgColorPicker = document.getElementById("QRBackgroundColor");
+    const bg1 = document.getElementById("qrbgcontainer");
+    const bg2 = document.getElementById("QRTextbgcontainer");
+
+    function hexToRGBA(hex, alpha = 0.25) {
+        let r = parseInt(hex.substring(1, 3), 16);
+        let g = parseInt(hex.substring(3, 5), 16);
+        let b = parseInt(hex.substring(5, 7), 16);
+        return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+    }
+
+    bgColorPicker.addEventListener("input", (event) => {
+        const selectedColor2 = event.target.value;
+        const rgbaColor = hexToRGBA(selectedColor2, 0.25)
+        bg1.style.backgroundColor = rgbaColor;
+        bg2.style.backgroundColor = rgbaColor;
+    });
+
+
     const fileInput = document.getElementById('wallpaper-upload');
     const previewArea = document.getElementById('wallpaper-demo');
     const wallpaperRadios = document.querySelectorAll('input[name="WallpaperOptions"]');
@@ -55,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-
     // Handle file upload
     fileInput.addEventListener('change', (event) => {
         const file = event.target.files[0];
@@ -72,8 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
             reader.readAsDataURL(file);
         }
     });
-});
-document.addEventListener("DOMContentLoaded", () => {
     const fileInput = document.getElementById('background-upload');
     const previewArea = document.getElementById('profile-demo');
     const wallpaperRadios = document.querySelectorAll('input[name="WallpaperOptions2"]');
