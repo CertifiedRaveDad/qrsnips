@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
             var hiddenField = document.getElementById("memberID");
         
             // Set a value dynamically
-            hiddenField.value = "memberID"; // Change this to whatever value you need
+            hiddenField.value = memberID; // Change this to whatever value you need
         });
       }
 
