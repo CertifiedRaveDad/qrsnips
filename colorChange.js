@@ -72,9 +72,10 @@ document.addEventListener("DOMContentLoaded", () => {
             reader.readAsDataURL(file);
         }
     });
+
     const fileInput2 = document.getElementById('background-upload');
     const previewArea2 = document.getElementById('profile-demo');
-    const wallpaperRadios2 = document.querySelectorAll('input[name="WallpaperOptions2"]');
+    const wallpaperRadios2 = document.querySelectorAll('input[name="BackgroundOptions"]');
 
     // Object mapping values to actual image URLs
     const wallpaperImages2 = {
@@ -101,19 +102,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Handle file upload
-    fileInput.addEventListener('change', (event) => {
-        const file = event.target.files[0];
+    fileInput2.addEventListener('change', (event) => {
+        const file2 = event.target.files[0];
 
-        if (file) {
-            const reader = new FileReader();
+        if (file2) {
+            const reader2 = new FileReader();
 
-            reader.onload = (e) => {
+            reader2.onload = (e) => {
                 setWallpaper(e.target.result);
                 // Uncheck all radio buttons when a file is uploaded
                 wallpaperRadios2.forEach(radio => radio.checked = false);
             }
 
-            reader.readAsDataURL(file);
+            reader2.readAsDataURL(file2);
         }
     });
 });
