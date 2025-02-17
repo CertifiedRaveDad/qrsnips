@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // QR Code Style Selection (Using external SVGs)
     function initQRCodeStyleSelector() {
         const svgContainer = document.getElementById("svg-container");
-        const qrStyleRadios = document.querySelectorAll("input[name='qrStyle']");
+        const qrStyleRadios = document.querySelectorAll("input[name='QRCodeStyle']");
 
         if (svgContainer && qrStyleRadios.length > 0) {
             const svgPaths = {
