@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Function to handle dropdown change (Dark/Light Mode)
         function initFontThemeSelector() {
             const themeSelector = document.getElementById("PublicPageFontcolor");
-            const textElements = document.getElementById("profile-demo"); // Apply to multiple elements
+            const textElements = document.querySelectorAll(".theme-text"); // Apply to multiple elements
     
             if (themeSelector) {
                 themeSelector.addEventListener("change", (event) => {
