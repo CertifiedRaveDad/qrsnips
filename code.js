@@ -123,10 +123,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (svgContainer && qrStyleRadios.length > 0) {
             const svgPaths = {
-                Basic: "https://cdn.prod.website-files.com/67a58d46517239e29521c97a/67b2ae1b52fcbb5326067518_Basic.svg",
-                Trance: "https://cdn.prod.website-files.com/67a58d46517239e29521c97a/67b2adeb70f3225a0a62072d_Trance.svg",
-                Glitter: "https://cdn.prod.website-files.com/67a58d46517239e29521c97a/67b2adabd861c78220dcab16_Untitled%20(7).svg",
-                Heart: "https://cdn.prod.website-files.com/67a58d46517239e29521c97a/67b2ad2982eb69c24f3a3d0e_Untitled%20(8).svg"
+                Basic: "https://cdn.prod.website-files.com/67a58d46517239e29521c97a/67b2b041abfc1045a99442af_Basic.svg",
+                Trance: "https://cdn.prod.website-files.com/67a58d46517239e29521c97a/67b2b041e106ce380d5c023e_Trance.svg",
+                Glitter: "https://cdn.prod.website-files.com/67a58d46517239e29521c97a/67b2b042f0dc00eabaa58555_Glitter.svg",
+                Heart: "https://cdn.prod.website-files.com/67a58d46517239e29521c97a/67b2b009f0dc00eabaa56485_hearts.svg"
             };
 
             qrStyleRadios.forEach(radio => {
