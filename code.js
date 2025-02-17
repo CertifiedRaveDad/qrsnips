@@ -159,4 +159,30 @@ document.addEventListener("DOMContentLoaded", () => {
     initWallpaperSelection("wallpaper-upload", "wallpaper-demo", "WallpaperOptions", wallpaperImages);
     initFontThemeSelector();
     initQRCodeStyleSelector();
+
+    function codeToRun() {
+        // Access the current member's information
+        $memberstackDom.getCurrentMember().then(member => {
+          // Set a JavaScript variable to a member property
+          console.log(member);
+          var memberSlug = member.data.customFields.slug; // Example: setting to member's email
+          let dashURL = "https://certified-rave-dad-2-2d9b32322552267288.webflow.io/found-vibes/members/" + memberSlug;
+          console.log("Member Email: ", memberSlug);
+          window.location.href = dashURL;
+        });
+      }
+
+    // Redirect the user to the new page after a short delay (optional)
+    setTimeout(() => {
+    
+        if (window.$memberstackReady) {
+            codeToRun(); // Run the code immediately if Memberstack is ready
+            
+          } else {
+            // Wait for Memberstack to be ready if it's not already
+            document.addEventListener("memberstack.ready", codeToRun);
+          }
+        
+    }, 4000); // Adjust delay as needed (milliseconds)
+    
 });
