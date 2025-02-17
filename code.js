@@ -165,8 +165,11 @@ document.addEventListener("DOMContentLoaded", () => {
         $memberstackDom.getCurrentMember().then(member => {
           // Set a JavaScript variable to a member property
           console.log(member);
-          var memberSlug = member.data.customFields.slug; // Example: setting to member's email
-          let dashURL = "https://certified-rave-dad-2-2d9b32322552267288.webflow.io/found-vibes/members/" + memberSlug;
+          var memberID = member.data.id; // Example: setting to member's email
+            var hiddenField = document.getElementById("memberID");
+        
+            // Set a value dynamically
+            hiddenField.value = "memberID"; // Change this to whatever value you need
         });
       }
 
