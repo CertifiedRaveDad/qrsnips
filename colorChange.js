@@ -85,22 +85,29 @@ document.addEventListener("DOMContentLoaded", () => {
         wallpaper3: "https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg"
     };
 
-        // Function to handle dropdown change (Dark/Light Mode)
-        function initFontThemeSelector() {
-            const themeSelector = document.getElementById("PublicPageFontcolor");
-            const textElements = document.querySelectorAll(".theme-text"); // Apply to multiple elements
-    
-            if (themeSelector) {
-                themeSelector.addEventListener("change", (event) => {
-                    const selectedTheme = event.target.value;
-                    const fontColor = selectedTheme === "dark" ? "black" : "white";
-    
-                    textElements.forEach(element => {
-                        element.style.color = fontColor;
-                    });
+    function initFontThemeSelector() {
+        const themeSelector = document.getElementById("PublicPageFontcolor");
+        const textElements = document.querySelectorAll(".theme-text"); // Get all elements
+
+        console.log("Selected text elements:", textElements); // Debugging: Check if elements are found
+
+        if (themeSelector && textElements.length > 0) {
+            themeSelector.addEventListener("change", (event) => {
+                const selectedTheme = event.target.value;
+                console.log("Theme changed to:", selectedTheme); // Debugging: Check selected value
+
+                const fontColor = selectedTheme === "dark" ? "black" : "white";
+
+                textElements.forEach(element => {
+                    element.style.color = fontColor;
+                    element.style.transition = "color 0.3s ease"; // Smooth transition
+                    console.log("Updated color of:", element, "to", fontColor); // Debugging
                 });
-            }
+            });
+        } else {
+            console.warn("Theme selector or text elements not found.");
         }
+    }
 
     // Initialize all functionalities
     initFontColorPicker();
