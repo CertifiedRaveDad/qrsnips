@@ -72,12 +72,12 @@ document.addEventListener("DOMContentLoaded", () => {
             reader.readAsDataURL(file);
         }
     });
-    const fileInput = document.getElementById('background-upload');
-    const previewArea = document.getElementById('profile-demo');
-    const wallpaperRadios = document.querySelectorAll('input[name="WallpaperOptions2"]');
+    const fileInput2 = document.getElementById('background-upload');
+    const previewArea2 = document.getElementById('profile-demo');
+    const wallpaperRadios2 = document.querySelectorAll('input[name="WallpaperOptions2"]');
 
     // Object mapping values to actual image URLs
-    const wallpaperImages = {
+    const wallpaperImages2 = {
         wallpaper1: "https://th.bing.com/th/id/OIP.GELKQ4d2ogvLPHMtaI4UygHaHa?rs=1&pid=ImgDetMain",
         wallpaper2: "https://th.bing.com/th/id/OIP.RVXdocs4cbENDzq9XpLkiwHaFS?rs=1&pid=ImgDetMain",
         wallpaper3: "https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg"
@@ -85,17 +85,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function setWallpaper(imageUrl) {
-        previewArea.style.backgroundImage = `url(${imageUrl})`;
+        previewArea2.style.backgroundImage = `url(${imageUrl})`;
     }
 
     // Handle radio button selection
-    wallpaperRadios.forEach(radio => {
+    wallpaperRadios2.forEach(radio => {
         radio.addEventListener('change', (event) => {
-            const selectedWallpaper = event.target.value;
-            if (wallpaperImages[selectedWallpaper]) {
-                setWallpaper(wallpaperImages[selectedWallpaper]);
+            const selectedWallpaper2 = event.target.value;
+            if (wallpaperImages2[selectedWallpaper2]) {
+                setWallpaper(wallpaperImages2[selectedWallpaper2]);
             }
-            fileInput.value = ""; // Clear file input to prevent conflicts
+            fileInput2.value = ""; // Clear file input to prevent conflicts
         });
     });
 
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
             reader.onload = (e) => {
                 setWallpaper(e.target.result);
                 // Uncheck all radio buttons when a file is uploaded
-                wallpaperRadios.forEach(radio => radio.checked = false);
+                wallpaperRadios2.forEach(radio => radio.checked = false);
             }
 
             reader.readAsDataURL(file);
