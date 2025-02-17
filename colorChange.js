@@ -87,23 +87,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function initFontThemeSelector() {
         const themeSelector = document.getElementById("PublicPageFontcolor");
-        const textElements = document.querySelectorAll(".theme-text"); // Get all elements
-
-        console.log("Selected text elements:", textElements); // Debugging: Check if elements are found
-
+        const textElements = document.querySelectorAll(".theme-text");
+    
         if (themeSelector && textElements.length > 0) {
-            themeSelector.addEventListener("change", (event) => {
-                const selectedTheme = event.target.value;
-                console.log("Theme changed to:", selectedTheme); // Debugging: Check selected value
-
-                const fontColor = selectedTheme === "Dark Font" ? "black" : "white";
-
+            function applyTheme() {
+                const selectedTheme = themeSelector.value;
+                const fontColor = selectedTheme === "dark" ? "black" : "white";
+    
                 textElements.forEach(element => {
                     element.style.color = fontColor;
                     element.style.transition = "color 0.3s ease"; // Smooth transition
-                    console.log("Updated color of:", element, "to", fontColor); // Debugging
                 });
-            });
+    
+                console.log("Applied font color:", fontColor);
+            }
+    
+            // Apply theme on dropdown change
+            themeSelector.addEventListener("change", applyTheme);
+    
+            // Apply theme immediately on page load
+            applyTheme();
         } else {
             console.warn("Theme selector or text elements not found.");
         }
