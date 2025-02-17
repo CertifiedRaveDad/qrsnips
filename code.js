@@ -167,8 +167,6 @@ document.addEventListener("DOMContentLoaded", () => {
           console.log(member);
           var memberSlug = member.data.customFields.slug; // Example: setting to member's email
           let dashURL = "https://certified-rave-dad-2-2d9b32322552267288.webflow.io/found-vibes/members/" + memberSlug;
-          console.log("Member Email: ", memberSlug);
-          window.location.href = dashURL;
         });
       }
 
