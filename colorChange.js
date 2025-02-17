@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (themeSelector && textElements.length > 0) {
             function applyTheme() {
                 const selectedTheme = themeSelector.value;
-                const fontColor = selectedTheme === "dark" ? "black" : "white";
+                const fontColor = selectedTheme === "Black" ? "black" : "white";
     
                 textElements.forEach(element => {
                     element.style.color = fontColor;
