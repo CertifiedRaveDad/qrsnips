@@ -160,30 +160,5 @@ document.addEventListener("DOMContentLoaded", () => {
     initFontThemeSelector();
     initQRCodeStyleSelector();
 
-    function codeToRun() {
-        // Access the current member's information
-        $memberstackDom.getCurrentMember().then(member => {
-          // Set a JavaScript variable to a member property
-          console.log(member);
-          var memberID = member.data.id; // Example: setting to member's email
-            var hiddenField = document.getElementById("memberID");
-        
-            // Set a value dynamically
-            hiddenField.value = memberID; // Change this to whatever value you need
-        });
-      }
-
-    // Redirect the user to the new page after a short delay (optional)
-    setTimeout(() => {
-    
-        if (window.$memberstackReady) {
-            codeToRun(); // Run the code immediately if Memberstack is ready
-            
-          } else {
-            // Wait for Memberstack to be ready if it's not already
-            document.addEventListener("memberstack.ready", codeToRun);
-          }
-        
-    }, 4000); // Adjust delay as needed (milliseconds)
     
 });
