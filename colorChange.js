@@ -85,9 +85,27 @@ document.addEventListener("DOMContentLoaded", () => {
         wallpaper3: "https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?cs=srgb&dl=pexels-pixabay-531880.jpg&fm=jpg"
     };
 
+        // Function to handle dropdown change (Dark/Light Mode)
+        function initFontThemeSelector() {
+            const themeSelector = document.getElementById("PublicPageFontcolor");
+            const textElements = document.getElementById("profile-demo"); // Apply to multiple elements
+    
+            if (themeSelector) {
+                themeSelector.addEventListener("change", (event) => {
+                    const selectedTheme = event.target.value;
+                    const fontColor = selectedTheme === "dark" ? "black" : "white";
+    
+                    textElements.forEach(element => {
+                        element.style.color = fontColor;
+                    });
+                });
+            }
+        }
+
     // Initialize all functionalities
     initFontColorPicker();
     initBackgroundColorPicker();
     initWallpaperSelection("background-upload", "profile-demo", "BackgroundOptions", wallpaperImages);
     initWallpaperSelection("wallpaper-upload", "wallpaper-demo", "WallpaperOptions", wallpaperImages);
+    initFontThemeSelector();
 });
