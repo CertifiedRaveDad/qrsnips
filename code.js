@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const bgColorPicker = document.getElementById("QRBackgroundColor");
         const bg1 = document.getElementById("qrbgcontainer");
         const bg2 = document.getElementById("QRTextbgcontainer");
+        const qrbgcolorhidden = document.getElementById("qrbgcolorhidden");
 
         function hexToRGBA(hex, alpha = 0.25) {
             let r = parseInt(hex.substring(1, 3), 16);
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const rgbaColor = hexToRGBA(selectedColor, 0.25);
                 bg1.style.backgroundColor = rgbaColor;
                 bg2.style.backgroundColor = rgbaColor;
+                qrbgcolorhidden.value = rgbaColor;
             });
         }
     }
