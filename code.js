@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (bgColorPicker && bg1 && bg2) {
             bgColorPicker.addEventListener("input", (event) => {
                 const selectedColor = event.target.value;
-                const rgbaColor = hexToRGBA(selectedColor, 0.25);
+                const rgbaColor = hexToRGBA(selectedColor, 0.4);
                 bg1.style.backgroundColor = rgbaColor;
                 bg2.style.backgroundColor = rgbaColor;
                 qrbgcolorhidden.value = rgbaColor;
